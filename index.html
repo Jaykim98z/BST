@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버축대 랜덤 드래프트</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>버축대 랜덤 드래프트</h1>
+
+    <div class="lineup">
+        <div class="position">
+            <label for="st">ST (선수 리스트):</label>
+            <textarea id="st" placeholder="Player1, Player2, Player3"></textarea>
+            <label for="stNumber">인원수:</label>
+            <input type="number" id="stNumber" min="1" max="5" value="1">
+        </div>
+        <div class="position">
+            <label for="wf">WF (선수 리스트):</label>
+            <textarea id="wf" placeholder="Player1, Player2, Player3"></textarea>
+            <label for="wfNumber">인원수:</label>
+            <input type="number" id="wfNumber" min="1" max="5" value="1">
+        </div>
+        <div class="position">
+            <label for="cm">CM (선수 리스트):</label>
+            <textarea id="cm" placeholder="Player1, Player2, Player3"></textarea>
+            <label for="cmNumber">인원수:</label>
+            <input type="number" id="cmNumber" min="1" max="5" value="1">
+        </div>
+        <div class="position">
+            <label for="cdm">CDM (선수 리스트):</label>
+            <textarea id="cdm" placeholder="Player1, Player2, Player3"></textarea>
+            <label for="cdmNumber">인원수:</label>
+            <input type="number" id="cdmNumber" min="1" max="5" value="1">
+        </div>
+        <div class="position">
+            <label for="wb">WB (선수 리스트):</label>
+            <textarea id="wb" placeholder="Player1, Player2, Player3"></textarea>
+            <label for="wbNumber">인원수:</label>
+            <input type="number" id="wbNumber" min="1" max="5" value="1">
+        </div>
+        <div class="position">
+            <label for="cb">CB (선수 리스트):</label>
+            <textarea id="cb" placeholder="Player1, Player2, Player3"></textarea>
+            <label for="cbNumber">인원수:</label>
+            <input type="number" id="cbNumber" min="1" max="5" value="1">
+        </div>
+        <div class="position">
+            <label for="gk">GK (선수 리스트):</label>
+            <textarea id="gk" placeholder="Player1, Player2, Player3"></textarea>
+            <label for="gkNumber">인원수:</label>
+            <input type="number" id="gkNumber" min="1" max="1" value="1">
+        </div>
+    </div>
+
+    <label for="teamCount">팀 수:</label>
+    <input type="number" id="teamCount" min="1" max="10" value="1">
+
+    <!-- 팀 이름 설정 -->
+    <div class="team-names">
+        <label for="teamNames">팀 이름 설정 (쉼표로 구분):</label>
+        <input type="text" id="teamNames" placeholder="Team1, Team2, Team3">
+    </div>
+
+    <button onclick="generateRandomTeams()">랜덤팀 생성</button>
+    <button type="button" onclick="resetForm()">전체 리셋</button> <!-- 전체 리셋 버튼 -->
+    <button type="button" onclick="resetTeams()">팀 리셋</button> <!-- 팀 리셋 버튼 -->
+
+    <h2>팀 목록</h2>
+    <div id="result"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
